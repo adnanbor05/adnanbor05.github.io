@@ -77,19 +77,19 @@
                 <h5 class="widget-title font-alt">Popular Posts</h5>
                 <ul class="widget-posts">
                   <li class="clearfix">
-                    <div class="widget-posts-image"><a href="blog_2.html"><img src="2.PNG" alt="Post Thumbnail" /></a>
+                    <div class="widget-posts-image"><a href="blog_1.html"><img src="1.PNG" alt="Post Thumbnail" /></a>
                     </div>
                     <div class="widget-posts-body">
-                      <div class="widget-posts-title"><a href="blog_2.html">Hamburger Navbar</a>
+                      <div class="widget-posts-title"><a href="blog_1.html">Auto Write Text</a>
                       </div>
                       <div class="widget-posts-meta">18 November</div>
                     </div>
                   </li>
                   <li class="clearfix">
-                    <div class="widget-posts-image"><a href="blog_3.html"><img src="3.PNG" alt="Post Thumbnail" /></a>
+                    <div class="widget-posts-image"><a href="blog_2.html"><img src="2.PNG" alt="Post Thumbnail" /></a>
                     </div>
                     <div class="widget-posts-body">
-                      <div class="widget-posts-title"><a href="blog_3.html">Dark Mode Changer</a></div>
+                      <div class="widget-posts-title"><a href="blog_2.html">Hamburger Navbar</a></div>
                       <div class="widget-posts-meta">18 November</div>
                     </div>
                   </li>
@@ -120,9 +120,9 @@
             <!-- main blgo -->
             <div class="col-sm-8 col-sm-offset-1">
               <div class="post">
-                <div class="post-thumbnail"><a href="#"><img src="1.PNG" alt="Blog-post Thumbnail" /></a></div>
+                <div class="post-thumbnail"><a href="#"><img src="6.PNG" alt="Blog-post Thumbnail" /></a></div>
                 <div class="post-header font-alt">
-                  <h2 class="post-title">Simple Auto Write Text With Javascript</h2>
+                  <h2 class="post-title">CSS Animasi 3D Box Loading Page</h2>
                   <div class="post-meta">By&nbsp;
                     <a href="#">Adnan Subronto</a>
                     | 18 November 2020 |
@@ -141,48 +141,132 @@
                   nesciunt sit expedita odit sint! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
                   corrupti sed sunt assumenda fugiat officia libero repellat debitis eos quam minus, delectus commodi
                   laudantium neque harum sit impedit nemo autem?</p>
+
+                <p>This is file &nbsp;<strong>HTML</strong>&nbsp; : </p>
+                <pre class="prettyprint lang-basic">
+&lt;div id=&quot;container&quot;&gt;
+        &lt;div id=&quot;top&quot;&gt;
+            &lt;h2&gt;codesaurus&lt;/h2&gt;
+            &lt;h4&gt;&lt;i class=&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;by AdnanBor&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;box&quot;&gt;
+            &lt;div class=&quot;face1 color1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;face2 color1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;face3 color2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;face4 color2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;face5 color3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;face6 color3&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;</pre>
                 <p>This is file &nbsp;<strong>CSS</strong>&nbsp; : </p>
                 <pre class="prettyprint lang-basic">
-* {
-  box-sizing: border-box;
-}
 body {
-  background-color: rebeccapurple;
+  background-color: #262626;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  font-family: &#039;Franklin Gothic Medium&#039;, &#039;Arial Narrow&#039;, Arial, sans-serif;
-  margin: 0;
-  min-height: 100vh;
+  margin: 0 auto;
+  height: 100vh;
+  min-height: 600px;
+}
+#top {
+  position: absolute;
+  top: 25%;
+  padding-bottom: 20px;
+  border-bottom-color:#f0f0f0;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+h2{
+  font-family: Verdana;
+  font-size: 2em;
+  color: #f0f0f0;
+}
+h4 {
+  font-family: sans-serif;
+  margin-bottom: 0px;
+  color: #f0f0f0
+}
+h4 i{
+  margin-right:5px;
+}
+#container {
+  height: 100vh;
+  width: 50vw;
+  min-height: 600px;
+  min-width: 300px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 500px;
+}
+#box * {
+  width: 150px;
+  height: 150px;
+  backface-visibility:visible;
+  position: absolute;
+  margin: 0 auto;
+}
+
+#box {
+  margin-top: 200px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: skew 3s linear 0s infinite;
+}
+.face2 {
+  transform: translateZ(-150px);
+}
+
+.face3 {
+  transform: rotateX(90deg) translateZ(75px) translateY(-75px);
+}
+
+.face4 {
+  transform: rotateX(90deg) translateZ(-75px) translateY(-75px);
+}
+
+.face5 {
+  transform: rotateY(90deg) translateZ(-75px) translateX(75px);
+}
+
+.face6 {
+  transform: rotateY(90deg) translateZ(75px) translateX(75px);
+}
+.color1 {
+background: linear-gradient(#ffffff, #f0f0f0, #eaeaea);
+opacity: 0.8;
+}
+.color2 {
+background: linear-gradient(#dbdbdb, #d2d2d2, #cecece);
+opacity: 0.8;
+}
+.color3 {
+background: linear-gradient(#d0d0d0, #c7c7c7, #c2c2c2);
+opacity: 0.8;
+}
+@keyframes skew {
+0% {
+  transform: rotateY(0deg) rotateZ(0deg);
+}
+100% {
+  transform: rotateY(360deg) rotateZ(360deg);
+}
 }</pre>
-                <p>This is file &nbsp;<strong>Javascript</strong>&nbsp; : </p>
-                <pre class="prettyprint lang-basic">
-&lt;script type=&quot;text/javascript&quot;&gt;
-  const text =
-  &quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quae, ullam fuga asperiores hic 
-  illo harum eaque optio vel eos dolorem quia delectus inventore, veritatis necessitatibus culpa ab. 
-  Saepe, possimus.&quot;;
-  let index = 0;
-  function writeText() {
-      document.body.innerText = text.slice(0, index);
-      index++;
-      if (index &gt; text.lenght) {
-        index = 0;
-      }
-    }
-  setInterval(writeText, 100);
-&lt;/script&gt;</pre>
 
               </div><br>
 
               <p>This is &nbsp;<strong>preview</strong>&nbsp; : </p>
               <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-                data-user="adnan-soebronto-leo" data-slug-hash="LYZvOmj"
+                data-user="adnan-soebronto-leo" data-slug-hash="wvWZEXK"
                 style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                data-pen-title="Simple Auto Write Text With Javascript">
-                <span>See the Pen <a href="https://codepen.io/adnan-soebronto-leo/pen/LYZvOmj">
-                    Simple Auto Write Text With Javascript</a> by Adnan Soebronto Leo (<a
+                data-pen-title="CSS ANIMASI 3D BOX LOADING PAGE">
+                <span>See the Pen <a href="https://codepen.io/adnan-soebronto-leo/pen/wvWZEXK">
+                    CSS ANIMASI 3D BOX LOADING PAGE</a> by Adnan Soebronto Leo (<a
                     href="https://codepen.io/adnan-soebronto-leo">@adnan-soebronto-leo</a>)
                   on <a href="https://codepen.io">CodePen</a>.</span>
               </p>
@@ -202,7 +286,7 @@ body {
 
               <!-- live or download -->
               <div>
-                <a href="live/live_1.html" class="btn btn-primary btn-round" type="submit" target="blank">
+                <a href="live/live_6.html" class="btn btn-primary btn-round" type="submit" target="blank">
                   <i class="fas fa-play"></i> Live
                 </a>&nbsp;
                 <a href="#" class="btn btn-info btn-round" type="submit">

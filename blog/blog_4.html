@@ -77,19 +77,19 @@
                 <h5 class="widget-title font-alt">Popular Posts</h5>
                 <ul class="widget-posts">
                   <li class="clearfix">
-                    <div class="widget-posts-image"><a href="blog_2.html"><img src="2.PNG" alt="Post Thumbnail" /></a>
+                    <div class="widget-posts-image"><a href="blog_1.html"><img src="1.PNG" alt="Post Thumbnail" /></a>
                     </div>
                     <div class="widget-posts-body">
-                      <div class="widget-posts-title"><a href="blog_2.html">Hamburger Navbar</a>
+                      <div class="widget-posts-title"><a href="blog_1.html">Auto Write Text</a>
                       </div>
                       <div class="widget-posts-meta">18 November</div>
                     </div>
                   </li>
                   <li class="clearfix">
-                    <div class="widget-posts-image"><a href="blog_3.html"><img src="3.PNG" alt="Post Thumbnail" /></a>
+                    <div class="widget-posts-image"><a href="blog_2.html"><img src="2.PNG" alt="Post Thumbnail" /></a>
                     </div>
                     <div class="widget-posts-body">
-                      <div class="widget-posts-title"><a href="blog_3.html">Dark Mode Changer</a></div>
+                      <div class="widget-posts-title"><a href="blog_2.html">Hamburger Navbar</a></div>
                       <div class="widget-posts-meta">18 November</div>
                     </div>
                   </li>
@@ -120,9 +120,9 @@
             <!-- main blgo -->
             <div class="col-sm-8 col-sm-offset-1">
               <div class="post">
-                <div class="post-thumbnail"><a href="#"><img src="1.PNG" alt="Blog-post Thumbnail" /></a></div>
+                <div class="post-thumbnail"><a href="#"><img src="4.PNG" alt="Blog-post Thumbnail" /></a></div>
                 <div class="post-header font-alt">
-                  <h2 class="post-title">Simple Auto Write Text With Javascript</h2>
+                  <h2 class="post-title">Pulse Heart</h2>
                   <div class="post-meta">By&nbsp;
                     <a href="#">Adnan Subronto</a>
                     | 18 November 2020 |
@@ -141,48 +141,94 @@
                   nesciunt sit expedita odit sint! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
                   corrupti sed sunt assumenda fugiat officia libero repellat debitis eos quam minus, delectus commodi
                   laudantium neque harum sit impedit nemo autem?</p>
+
+                <p>This is file &nbsp;<strong>HTML</strong>&nbsp; : </p>
+                <pre class="prettyprint lang-basic">
+&lt;div class=&quot;toggle-container&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot; name=&quot;toggle&quot;&gt;&lt;label for=&quot;toggle&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+    &lt;h1&gt;Background Changer Dark Mode&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque praesentium laborum
+    dolorum minima, officiis,temporibus dolorem iusto sint accusantium perspiciatis aspernatur
+    sapiente! Nostrum quod beatae unde quo dolore doloremque perspiciatis!&lt;/p&gt;</pre>
                 <p>This is file &nbsp;<strong>CSS</strong>&nbsp; : </p>
                 <pre class="prettyprint lang-basic">
 * {
   box-sizing: border-box;
 }
+
 body {
-  background-color: rebeccapurple;
+  background-color: #e18e8e30;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   font-size: 2rem;
-  font-family: &#039;Franklin Gothic Medium&#039;, &#039;Arial Narrow&#039;, Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
+  text-align: center;
+  padding: 5rem;
+}
+
+.love {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 0 20px;
+  animation: pulse 1s infinite alternate ease-in-out;
+  margin: 0 auto;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(.9) rotate(-135deg);
+  }
+
+  100% {
+      transform: scale(1.1) rotate(-135deg);
+  }
+}
+
+.main {
+  width: 200px;
+  height: 200px;
+  background: #c70000;
+  position: absolute;
+}
+
+.love-1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #c70000;
+  position: absolute;
+  top: 100px;
+}
+
+.love-2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #c70000;
+  position: absolute;
+  left: 100px;
 }</pre>
-                <p>This is file &nbsp;<strong>Javascript</strong>&nbsp; : </p>
+                <p>This code for smooth &nbsp;<strong>CSS</strong>&nbsp; : </p>
                 <pre class="prettyprint lang-basic">
-&lt;script type=&quot;text/javascript&quot;&gt;
-  const text =
-  &quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quae, ullam fuga asperiores hic 
-  illo harum eaque optio vel eos dolorem quia delectus inventore, veritatis necessitatibus culpa ab. 
-  Saepe, possimus.&quot;;
-  let index = 0;
-  function writeText() {
-      document.body.innerText = text.slice(0, index);
-      index++;
-      if (index &gt; text.lenght) {
-        index = 0;
-      }
-    }
-  setInterval(writeText, 100);
-&lt;/script&gt;</pre>
+love {
+  animation: pulse 1s infinite alternate ease-in-out;
+}</pre>
 
               </div><br>
 
               <p>This is &nbsp;<strong>preview</strong>&nbsp; : </p>
               <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-                data-user="adnan-soebronto-leo" data-slug-hash="LYZvOmj"
+                data-user="adnan-soebronto-leo" data-slug-hash="vYKMapp" data-preview="true"
                 style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                data-pen-title="Simple Auto Write Text With Javascript">
-                <span>See the Pen <a href="https://codepen.io/adnan-soebronto-leo/pen/LYZvOmj">
-                    Simple Auto Write Text With Javascript</a> by Adnan Soebronto Leo (<a
+                data-pen-title="Pulse Heart  Love">
+                <span>See the Pen <a href="https://codepen.io/adnan-soebronto-leo/pen/vYKMapp">
+                    Pulse Heart Love</a> by Adnan Soebronto Leo (<a
                     href="https://codepen.io/adnan-soebronto-leo">@adnan-soebronto-leo</a>)
                   on <a href="https://codepen.io">CodePen</a>.</span>
               </p>
@@ -202,7 +248,7 @@ body {
 
               <!-- live or download -->
               <div>
-                <a href="live/live_1.html" class="btn btn-primary btn-round" type="submit" target="blank">
+                <a href="live/live_4.html" class="btn btn-primary btn-round" type="submit" target="blank">
                   <i class="fas fa-play"></i> Live
                 </a>&nbsp;
                 <a href="#" class="btn btn-info btn-round" type="submit">
