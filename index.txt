@@ -243,7 +243,7 @@
                 <p>I always open to interesting projects.</p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="col-sm-6 col-md-4 col-lg-2" data-aos="fade-left">
               <div class="callout-btn-box"><a class="btn btn-w btn-round" href="project.html">Lets view portfolio</a>
               </div>
             </div>
