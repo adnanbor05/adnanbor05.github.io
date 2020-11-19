@@ -4,112 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumping Loading Page</title>
+    <title>Background Parallax</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
-    <style type="text/css">
         * {
             box-sizing: border-box;
         }
 
         body {
-            background-color: #917fe9;
+            background-color: #000;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            font-size: 2rem;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             min-height: 100vh;
             text-align: center;
-            padding: 5rem;
         }
 
-        h1 {
-            margin: 0;
-            padding: 5rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            align-items: center;
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
             justify-content: center;
-            transform: translate(-30%, -30%);
+            justify-items: center;
         }
 
-        h1 span {
-            color: #262626;
-            background-color: #fff;
-            padding: 10px 20px;
-            font-family: arial;
-            display: table-cell;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, .3), 0 5px 0 #ccc;
-            animation: ani .5s infinite;
+        section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        @keyframes ani {
-            0% {
-                transform: translateY(0px);
-                box-shadow: inset 0 0 5px rgba(0, 0, 0, .3), 0 5px 0 #ccc, 0 15px 5px rgba(0, 0, 0, 0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-                box-shadow: inset 0 0 5px rgba(0, 0, 0, .3), 0 5px 0 #ccc, 0 15px 5px rgba(0, 0, 0, .6);
-            }
-
-            100% {
-                transform: translateY(0px);
-                box-shadow: inset 0 0 5px rgba(0, 0, 0, .3), 0 5px 0 #ccc, 0 15px 5px rgba(0, 0, 0, 0);
-            }
-        }
-
-        h1 span:nth-child(1) {
-            animation-delay: .2s;
-        }
-
-        h1 span:nth-child(2) {
-            animation-delay: .4s;
-        }
-
-        h1 span:nth-child(3) {
-            animation-delay: .6s;
-        }
-
-        h1 span:nth-child(4) {
-            animation-delay: .8s;
-        }
-
-        h1 span:nth-child(5) {
-            animation-delay: 1s;
-        }
-
-        h1 span:nth-child(6) {
-            animation-delay: 1.2s;
-        }
-
-        h1 span:nth-child(7) {
-            animation-delay: 1.4s;
-        }
-
-        h1 span:nth-child(8) {
-            animation-delay: 1.8s;
+        section h2 {
+            position: relative;
+            color: #fff;
+            font-size: 12em;
         }
     </style>
 </head>
 
 <body>
+    <section>
+        <img src="images/1.png" data-speed="-5" class="layer">
+        <img src="images/2.png" data-speed="5" class="layer">
+        <img src="images/3.png" data-speed="2" class="layer">
+        <img src="images/4.png" data-speed="6" class="layer">
+        <img src="images/5.png" data-speed="8" class="layer">
+        <img src="images/6.png" data-speed="-2" class="layer">
+        <img src="images/7.png" data-speed="4" class="layer">
+        <img src="images/8.png" data-speed="-9" class="layer">
+        <img src="images/9.png" data-speed="6" class="layer">
+        <img src="images/10.png" data-speed="-7" class="layer">
+        <img src="images/11.png" data-speed="-5" class="layer">
+        <img src="images/12.png" data-speed="5" class="layer">
+        <h2 class="layer" data-speed="2">Adnan Bor</h2>
+    </section>
 
-    <h1>
-        <span>a</span>
-        <span>d</span>
-        <span>n</span>
-        <span>a</span>
-        <span>n</span>
-        <span>b</span>
-        <span>o</span>
-        <span>r</span>
-    </h1>
 
+    <script>
+        document.addEventListener("mousemove", parallax);
+
+        function parallax(e) {
+            this.querySelectorAll('.layer').forEach(layer => {
+                const speed = layer.getAttribute('data-speed')
+
+                const x = (window.innerWidth - e.pageX * speed) / 100
+                const y = (window.innerHeight - e.pageY * speed) / 100
+
+                layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+            });
+        }
+    </script>
 </body>
 
 </html>

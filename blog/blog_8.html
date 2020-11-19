@@ -89,7 +89,7 @@
                     <div class="widget-posts-image"><a href="blog_2.html"><img src="2.PNG" alt="Post Thumbnail" /></a>
                     </div>
                     <div class="widget-posts-body">
-                      <div class="widget-posts-title"><a href="blog_2.html">Hamburger Navbar</a></div>
+                      <div class="widget-posts-title"><a href="blog_2.html">DNA Animation Loading CSS</a></div>
                       <div class="widget-posts-meta">18 November</div>
                     </div>
                   </li>
@@ -120,9 +120,9 @@
             <!-- main blgo -->
             <div class="col-sm-8 col-sm-offset-1">
               <div class="post">
-                <div class="post-thumbnail"><a href="#"><img src="5.PNG" alt="Blog-post Thumbnail" /></a></div>
+                <div class="post-thumbnail"><a href="#"><img src="8.PNG" alt="Blog-post Thumbnail" /></a></div>
                 <div class="post-header font-alt">
-                  <h2 class="post-title">Background Parallax</h2>
+                  <h2 class="post-title">Particle Parallax</h2>
                   <div class="post-meta">By&nbsp;
                     <a href="#">Adnan Subronto</a>
                     | 18 November 2020 |
@@ -144,89 +144,134 @@
 
                 <p>This is file &nbsp;<strong>HTML</strong>&nbsp; : </p>
                 <pre class="prettyprint lang-basic">
-&lt;section&gt;
-        &lt;img src=&quot;images/1.png&quot; data-speed=&quot;-5&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/2.png&quot; data-speed=&quot;5&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/3.png&quot; data-speed=&quot;2&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/4.png&quot; data-speed=&quot;6&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/5.png&quot; data-speed=&quot;8&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/6.png&quot; data-speed=&quot;-2&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/7.png&quot; data-speed=&quot;4&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/8.png&quot; data-speed=&quot;-9&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/9.png&quot; data-speed=&quot;6&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/10.png&quot; data-speed=&quot;-7&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/11.png&quot; data-speed=&quot;-5&quot; class=&quot;layer&quot;&gt;
-        &lt;img src=&quot;images/12.png&quot; data-speed=&quot;5&quot; class=&quot;layer&quot;&gt;
-        &lt;h2 class=&quot;layer&quot; data-speed=&quot;2&quot;&gt;Adnan Bor&lt;/h2&gt;
-&lt;/section&gt;</pre>
+&lt;div id=&quot;parallax&quot;&gt;
+	&lt;div class=&quot;layer&quot; data-depth=&quot;0.6&quot;&gt;
+		&lt;div class=&quot;some-space&quot;&gt;
+			&lt;h1&gt;PARALLAX&lt;/h1&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layer&quot; data-depth=&quot;0.4&quot;&gt;
+		&lt;div id=&quot;particles-js&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;layer&quot; data-depth=&quot;0.3&quot;&gt;
+		&lt;div class=&quot;some-more-space&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Hit me.&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+                <p>You need to conect with &nbsp;<strong>cdn library</strong>&nbsp; : </p>
+                <pre class="prettyprint lang-basic">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css&quot;&gt;
+&lt;script src=&#039;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js&#039;&gt;&lt;/script&gt;
+&lt;script src=&#039;https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js&#039;&gt;&lt;/script&gt;
+&lt;script src=&#039;https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js&#039;&gt;&lt;/script&gt;</pre>
+
                 <p>This is file &nbsp;<strong>CSS</strong>&nbsp; : </p>
                 <pre class="prettyprint lang-basic">
-@import url(&#039;https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap&#039;);
-
-        * {
-            box-sizing: border-box;
-        }
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
 
         body {
-            background-color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: &#039;Poppins&#039;, sans-serif;
-            margin: 0;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        section {
-            position: relative;
-            width: 100%;
-            height: 100vh;
+            font-family: "Lato";
+            background: #252729;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            justify-items: center;
-        }
-
-        section img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
             height: 100%;
-            object-fit: cover;
+            width: 100%;
+            -webkit-font-smoothing: antialiased;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
-        section h2 {
-            position: relative;
-            color: #fff;
-            font-size: 12em;
+        #particles-js,
+        #parallax,
+        .layer,
+        .some-space,
+        .some-more-space {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+        #particles-js {
+            opacity: 0.6;
+        }
+
+        h1 {
+            color: white;
+            font-size: 5em;
+            font-weight: 100;
+            letter-spacing: 0.2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        a {
+            color: white;
+            border: 1px solid white;
+            display: table;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            letter-spacing: 0.05em;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            text-decoration: none;
+            -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+            padding: 10px 15px;
+        }
+
+        a:hover {
+            background: white;
+            color: black;
+        }
+
+        .some-space {
+            animation: rotate 18s 0.5s infinite linear reverse;
+        }
+
+        .some-more-space {
+            -webkit-animation: rotate 15s 0.1s infinite linear;
+            animation: rotate 15s 0.1s infinite linear;
+        }
+
+        @-webkit-keyframes rotate {
+            0% {
+                -webkit-transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg);
+                transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
+                transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg);
+                transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
+                transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
+            }
         }</pre>
 
-                <p>This is file &nbsp;<strong>Javascript</strong>&nbsp; : </p>
-                <pre class="prettyprint lang-basic">
-document.addEventListener(&quot;mousemove&quot;, parallax);
-
-        function parallax(e) {
-            this.querySelectorAll(&#039;.layer&#039;).forEach(layer =&gt; {
-                const speed = layer.getAttribute(&#039;data-speed&#039;)
-
-                const x = (window.innerWidth - e.pageX * speed) / 100
-                const y = (window.innerHeight - e.pageY * speed) / 100
-
-                layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-            });
-        }
-                </pre>
               </div><br>
 
               <p>This is &nbsp;<strong>preview</strong>&nbsp; : </p>
-              <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-                data-user="adnan-soebronto-leo" data-slug-hash="LYZopWR"
+              <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result"
+                data-user="adnan-soebronto-leo" data-slug-hash="gOMJrYb"
                 style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                data-pen-title="Background Parallax">
-                <span>See the Pen <a href="https://codepen.io/adnan-soebronto-leo/pen/LYZopWR">
-                    Background Parallax</a> by Adnan Soebronto Leo (<a
+                data-pen-title="Particle Parallax Mousemove">
+                <span>See the Pen <a href="https://codepen.io/adnan-soebronto-leo/pen/gOMJrYb">
+                    Particle Parallax Mousemove</a> by Adnan Soebronto Leo (<a
                     href="https://codepen.io/adnan-soebronto-leo">@adnan-soebronto-leo</a>)
                   on <a href="https://codepen.io">CodePen</a>.</span>
               </p>
@@ -246,7 +291,7 @@ document.addEventListener(&quot;mousemove&quot;, parallax);
 
               <!-- live or download -->
               <div>
-                <a href="live/live_5.html" class="btn btn-primary btn-round" type="submit" target="blank">
+                <a href="live/live_8.html" class="btn btn-primary btn-round" type="submit" target="blank">
                   <i class="fas fa-play"></i> Live
                 </a>&nbsp;
                 <a href="#" class="btn btn-info btn-round" type="submit">
